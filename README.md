@@ -14,5 +14,8 @@ Comandos Utiles:
 
 * docker ps 
 
-* docker run --name webserver -v /Users/makingdevs/jenkins:/root/.jenkins *Nombre-Imagen*
+* docker run --name webserver -d -v /Users/makingdevs/jenkins:/root/.jenkins --env JAVA_OPTS="-Djava.util.logging.config.file=/logging.properties" *Nombre-Imagen*
 
+* docker logs -f webserver | grep nginx-log
+
+* docker logs -f webserver | grep jenkins-log
