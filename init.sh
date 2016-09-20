@@ -1,5 +1,5 @@
 #! /bin/bash -e
 
 echo "Ejecuntando script"
-/sbin/nginx
+service nginx start
 java $JAVA_OPTS -jar jenkins.war 
