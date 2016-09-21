@@ -4,6 +4,8 @@ RUN apt-get update
 RUN apt-get -y install wget
 RUN apt-get -y install nginx
 
+VOLUME ["/root/.jenkins"]
+
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY nginx.virtual.conf /etc/nginx/conf.d/virtual-host.conf
 
@@ -18,7 +20,6 @@ RUN apt-get -y install software-properties-common
 RUN add-apt-repository -y ppa:webupd8team/java
 RUN apt-get update
 
-RUN echo "hola"
 RUN echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" |  debconf-set-selections
 RUN apt-get install -y oracle-java8-installer
 
