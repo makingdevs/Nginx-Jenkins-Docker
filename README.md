@@ -19,3 +19,7 @@ Comandos Utiles:
 * docker logs -f webserver | grep nginx-log
 
 * docker logs -f webserver | grep jenkins-log
+
+* docker run --rm --env-file env.txt --volumes-from webserver --name dockup wetransform/dockup:latest
+
+* docker-machine create --driver amazonec2 --amazonec2-region us-east-1 --amazonec2-vpc-id vpc-86e9bfe3 machine-docker
