@@ -108,3 +108,5 @@ docker run --rm --env-file env.txt --volumes-from <Nombre del proceso> --name do
 ```
 
 En donde el archivo env.txt contiene informacion de nuestro s3 (Importante este tendremos que modificarlo para agregar nuestras llaves de amazon) ademas de indicarle en que bucket o carpeta deseamos realizar los respaldos, o si deseamos hacer el restore de la informacion colocando la bandera `RESTORE=true` 
+
+La propiedad `CRON_TIME=0 0 * * *` en el archivo env.txt es el cron para el tiempo en el cual se realizara el respaldo de la información si esta propiedad no esta solo se ejecutara una sola vez el respaldo y terminara el proceso
