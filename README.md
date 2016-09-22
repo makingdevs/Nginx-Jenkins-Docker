@@ -81,9 +81,9 @@ docker logs <Nombre del proceso>
 ### Log de Nginx y de Jenkis 
 
 ```
-docker logs -f <Nombre del proceso> | grep nginx-log
+docker logs -f <Nombre del proceso> | grep [nginx]
 
-docker logs -f <Nombre del proceso> | grep jenkins-log
+docker logs -f <Nombre del proceso> | grep [jenkins]
 ```
 
 ### Otros comandos utiles
